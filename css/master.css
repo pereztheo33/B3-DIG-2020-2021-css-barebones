@@ -50,6 +50,7 @@ nav .liens a {
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
+	transition: .5s;
 }
 
 #nav-survol {
@@ -71,10 +72,12 @@ nav .icone-burger .ligne {
 	background-color: #fff;
 	margin: 5px;
 	border-radius: 3px;
+	transition: all .3s ease-in-out;
 }
 
 .container {
   margin-top: 9em;
+  margin-bottom: 4em;
   columns: 3;
   padding-left: 4vh;
   padding-right: 4vh;
@@ -100,6 +103,12 @@ h2 {
   transition: .3s;
 }
 
+h4 {
+  font-family: 'MuseoModerno', cursive;
+  color: #3e65da;
+  transition: .3s;
+}
+
 h2:hover {
 	color: ;
 	font-weight: bold;
@@ -113,6 +122,27 @@ p {
 .persocard img{
   max-width: 250px;
   max-height: 250px;
+}
+
+footer {
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'MuseoModerno', cursive;
+	padding: 0 5%;
+	height: 80px;
+	background-color: #3e65da;
+}
+
+footer .basdepage {
+	text-align: center;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
 }
 
 @media screen and (max-width: 1058px) {
@@ -134,8 +164,9 @@ p {
 		height: auto;
 		flex-direction: column;
 		background-color: rgba(0,0,0,.8);
+		box-sizing: border-box;
 		overflow: hidden;
-		transition: all .5s ease-in-out;
+		
 	}
 
 	nav .liens a {
@@ -147,14 +178,20 @@ p {
 		display: block;
 	}
 
-    nav : checked ~ .liens {
+    nav :checked ~ .liens {
 		bottom: 0;
-		font-weight: bold;
-
 	}
 
-	nav : checked ~ .icone-burger .ligne {
+	nav :checked ~ .icone-burger .ligne:nth-child(1) {
+		transform: translateY(10px) rotate(225deg); 
+	}
 
+	nav :checked ~ .icone-burger .ligne:nth-child(3) {
+		transform: translateY(10px) rotate(-225deg);
+	}
+
+	nav :checked ~ .icone-burger .ligne:nth-child(2) {
+		opacity: 0;
 	}
 
 	.container {
