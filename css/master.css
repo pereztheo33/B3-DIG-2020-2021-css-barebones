@@ -100,6 +100,11 @@ h2 {
   transition: .3s;
 }
 
+h2:hover {
+	color: ;
+	font-weight: bold;
+}
+
 p {
 	font-family: 'Lato';
 	color: 
@@ -110,7 +115,7 @@ p {
   max-height: 250px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1058px) {
 		nav .logo {
 		float: none;
 		width: auto;
