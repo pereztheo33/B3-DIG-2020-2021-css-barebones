@@ -96,7 +96,6 @@ h1 {
 }
 
 h1:hover {
-	color: ;
 	font-weight: bold;
 }
 
@@ -127,6 +126,7 @@ p {
 	margin-left: 4vh;
 	margin-bottom: 4em;
 	margin-right: 5vh;
+	margin-top: 5em;
 }
 
 .conteneur {
